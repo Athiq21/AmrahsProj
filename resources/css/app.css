@@ -1,0 +1,498 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    @apply bg-sky-50 dark:bg-zinc-900 text-gray-900 dark:text-white;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    @apply font-bold first-letter:uppercase tracking-wide;
+}
+
+h1 {
+    @apply text-4xl;
+}
+
+h2 {
+    @apply text-3xl;
+}
+
+h3 {
+    @apply text-2xl;
+}
+
+h4 {
+    @apply text-xl;
+}
+
+h5 {
+    @apply text-lg;
+}
+
+h6 {
+    @apply text-base;
+}
+
+p {
+    @apply text-base;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(0);
+}
+
+.dark input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+}
+
+.row {
+    @apply flex flex-wrap gap-4;
+}
+
+.text__primary {
+    @apply text-sky-500;
+}
+.text__danger {
+    @apply text-rose-500;
+}
+.text__success {
+    @apply text-teal-500;
+}
+.text__warning {
+    @apply text-amber-500;
+}
+.text__info {
+    @apply text-indigo-500;
+}
+.text__secondary {
+    @apply text-gray-500;
+}
+.text__light {
+    @apply text-white;
+}
+.text__dark {
+    @apply text-gray-900;
+}
+
+.border__primary {
+    @apply border-sky-500;
+}
+.border__danger {
+    @apply border-rose-500;
+}
+.border__success {
+    @apply border-teal-500;
+}
+.border__warning {
+    @apply border-amber-500;
+}
+.border__info {
+    @apply border-indigo-500;
+}
+.border__secondary {
+    @apply border-gray-500;
+}
+.border__light {
+    @apply border-white;
+}
+.border__dark {
+    @apply border-gray-500;
+}
+
+.bg__primary {
+    @apply bg-sky-500;
+}
+.bg__danger {
+    @apply bg-rose-500;
+}
+.bg__success {
+    @apply bg-teal-500;
+}
+.bg__warning {
+    @apply bg-amber-500;
+}
+.bg__info {
+    @apply bg-indigo-500;
+}
+.bg__secondary {
+    @apply bg-gray-500;
+}
+.bg__light {
+    @apply bg-white;
+}
+.bg__dark {
+    @apply bg-gray-900;
+}
+
+.form__cols {
+    @apply grid grid-cols-1 gap-6 md:grid-cols-3 lg:col-span-4;
+}
+
+.form__group {
+    @apply my-4;
+}
+
+.form__group__checkbox {
+    @apply flex items-center;
+}
+
+label.checkbox__label {
+    @apply ml-2 font-medium text-gray-900 dark:text-gray-300;
+}
+
+select.select_default {
+    @apply bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-sky-500 focus:border-sky-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-sky-500 dark:focus:border-sky-500;
+}
+
+select.select__failed {
+    @apply bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-rose-500 focus:border-rose-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-rose-500 dark:focus:border-rose-500;
+}
+
+label.label__default {
+    @apply block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400;
+}
+
+label.label__failed {
+    @apply block mb-2 text-sm font-medium text-rose-500 dark:text-rose-600;
+}
+
+.disabled {
+    @apply cursor-not-allowed;
+}
+
+.form__checkbox {
+    @apply w-4 h-4 text-sky-600 bg-gray-100 rounded border-gray-300 focus:ring-sky-500 dark:focus:ring-sky-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600;
+}
+
+.checkbox__danger {
+    @apply w-4 h-4 text-rose-600 bg-gray-100 rounded border-gray-300 focus:ring-rose-500 dark:focus:ring-rose-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600;
+}
+
+.checkbox__warning {
+    @apply w-4 h-4 text-amber-600 bg-gray-100 rounded border-gray-300 focus:ring-amber-500 dark:focus:ring-amber-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600;
+}
+
+.checkbox__success {
+    @apply w-4 h-4 text-teal-600 bg-gray-100 rounded border-gray-300 focus:ring-teal-500 dark:focus:ring-teal-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600;
+}
+
+.checkbox__info {
+    @apply w-4 h-4 text-indigo-600 bg-gray-100 rounded border-gray-300 focus:ring-indigo-500 dark:focus:ring-indigo-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600;
+}
+
+.checkbox__light {
+    @apply w-4 h-4 text-gray-500 bg-gray-300 rounded border-gray-300 focus:ring-gray-400 dark:focus:ring-gray-500 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600;
+}
+
+.checkbox__dark {
+    @apply w-4 h-4 text-gray-800 bg-gray-100 rounded border-gray-300 focus:ring-gray-500 dark:focus:ring-gray-700 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600;
+}
+
+.checkbox_toggle {
+    @apply w-11 h-6 bg-gray-200 dark:bg-gray-700 rounded-full after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600;
+}
+
+.form__radio {
+    @apply w-4 h-4 text-sky-600 bg-gray-100 border-gray-300 focus:ring-sky-500 dark:focus:ring-sky-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600;
+}
+
+.form__radio__danger {
+    @apply w-4 h-4 text-rose-600 bg-gray-100 border-gray-300 focus:ring-rose-500 dark:focus:ring-rose-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600;
+}
+
+.form__radio__warning {
+    @apply w-4 h-4 text-amber-600 bg-gray-100 border-gray-300 focus:ring-amber-500 dark:focus:ring-amber-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600;
+}
+
+.form__radio__success {
+    @apply w-4 h-4 text-teal-600 bg-gray-100 border-gray-300 focus:ring-teal-500 dark:focus:ring-teal-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600;
+}
+
+.form__radio__info {
+    @apply w-4 h-4 text-indigo-600 bg-gray-100 border-gray-300 focus:ring-indigo-500 dark:focus:ring-indigo-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600;
+}
+
+.form__radio__light {
+    @apply w-4 h-4 text-gray-500 dark:text-gray-400 bg-gray-100 border-gray-300 focus:ring-gray-500 dark:focus:ring-gray-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600;
+}
+
+.form__radio__dark {
+    @apply w-4 h-4 text-gray-900 dark:text-gray-700 bg-gray-100 border-gray-300 focus:ring-gray-500 dark:focus:ring-gray-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600;
+}
+
+.btn__primary {
+    @apply font-medium rounded text-sm mb-2 scale-100 hover:scale-105 focus:outline-none transition-all duration-200 ease-in-out text-white bg-sky-500 hover:bg-sky-600 focus:ring-sky-300 dark:bg-sky-600 dark:hover:bg-sky-700 dark:focus:ring-sky-700;
+}
+
+.btn__danger {
+    @apply font-medium rounded text-sm mb-2 scale-100 hover:scale-105 focus:outline-none transition-all duration-200 ease-in-out text-white bg-rose-500 hover:bg-rose-600 focus:ring-rose-300 dark:bg-rose-600 dark:hover:bg-rose-700 dark:focus:ring-rose-700;
+}
+
+.btn__success {
+    @apply font-medium rounded text-sm mb-2 scale-100 hover:scale-105 focus:outline-none transition-all duration-200 ease-in-out text-white bg-teal-500 hover:bg-teal-600 focus:ring-teal-300 dark:bg-teal-600 dark:hover:bg-teal-700 dark:focus:ring-teal-700;
+}
+
+.btn__warning {
+    @apply font-medium rounded text-sm mb-2 scale-100 hover:scale-105 focus:outline-none transition-all duration-200 ease-in-out text-white bg-amber-500 hover:bg-amber-600 focus:ring-amber-300 dark:bg-amber-600 dark:hover:bg-amber-700 dark:focus:ring-amber-700;
+}
+
+.btn__info {
+    @apply font-medium rounded text-sm mb-2 scale-100 hover:scale-105 focus:outline-none transition-all duration-200 ease-in-out text-white bg-indigo-500 hover:bg-indigo-600 focus:ring-indigo-300 dark:bg-indigo-600 dark:hover:bg-indigo-700 dark:focus:ring-indigo-700;
+}
+
+.btn__secondary {
+    @apply font-medium rounded text-sm mb-2 scale-100 hover:scale-105 focus:outline-none transition-all duration-200 ease-in-out text-white bg-gray-500 hover:bg-gray-600 focus:ring-gray-300 dark:bg-gray-600 dark:hover:bg-gray-700 dark:focus:ring-gray-700;
+}
+
+.btn__light {
+    @apply font-medium rounded text-sm mb-2 scale-100 hover:scale-105 focus:outline-none transition-all duration-200 ease-in-out text-gray-900 bg-white border border-gray-300 dark:border-gray-200 hover:bg-slate-100 focus:ring-gray-300 dark:bg-gray-800 dark:hover:bg-gray-900 dark:focus:ring-gray-700 dark:text-white;
+}
+
+.btn__dark {
+    @apply font-medium rounded text-sm mb-2 scale-100 hover:scale-105 focus:outline-none transition-all duration-200 ease-in-out text-white bg-gray-800 hover:bg-gray-900 focus:ring-gray-700 dark:bg-gray-300 dark:hover:bg-gray-200 dark:focus:ring-gray-300 dark:text-gray-800;
+}
+
+.btn__outline__primary {
+    @apply focus:ring-4 focus:outline-none font-medium rounded text-sm  text-center mb-2 dark:hover:text-white scale-100 hover:scale-105 transition-all duration-200 ease-in-out text-sky-500 hover:text-white border border-sky-500 hover:bg-sky-500 focus:ring-sky-300 dark:border-sky-600 dark:text-sky-600 dark:hover:bg-sky-700 dark:focus:ring-sky-700;
+}
+
+.btn__outline__danger {
+    @apply focus:ring-4 focus:outline-none font-medium rounded text-sm  text-center mb-2 dark:hover:text-white scale-100 hover:scale-105 transition-all duration-200 ease-in-out text-rose-500 hover:text-white border border-rose-500 hover:bg-rose-500 focus:ring-rose-300 dark:border-rose-600 dark:text-rose-600 dark:hover:bg-rose-700 dark:focus:ring-rose-700;
+}
+
+.btn__outline__success {
+    @apply focus:ring-4 focus:outline-none font-medium rounded text-sm  text-center mb-2 dark:hover:text-white scale-100 hover:scale-105 transition-all duration-200 ease-in-out text-teal-500 hover:text-white border border-teal-500 hover:bg-teal-500 focus:ring-teal-300 dark:border-teal-600 dark:text-teal-600 dark:hover:bg-teal-700 dark:focus:ring-teal-700;
+}
+
+.btn__outline__warning {
+    @apply focus:ring-4 focus:outline-none font-medium rounded text-sm  text-center mb-2 dark:hover:text-white scale-100 hover:scale-105 transition-all duration-200 ease-in-out text-amber-500 hover:text-white border border-amber-500 hover:bg-amber-500 focus:ring-amber-300 dark:border-amber-600 dark:text-amber-600 dark:hover:bg-amber-700 dark:focus:ring-amber-700;
+}
+
+.btn__outline__info {
+    @apply focus:ring-4 focus:outline-none font-medium rounded text-sm  text-center mb-2 dark:hover:text-white scale-100 hover:scale-105 transition-all duration-200 ease-in-out text-indigo-500 hover:text-white border border-indigo-500 hover:bg-indigo-500 focus:ring-indigo-300 dark:border-indigo-600 dark:text-indigo-600 dark:hover:bg-indigo-700 dark:focus:ring-indigo-700;
+}
+
+.btn__outline__secondary {
+    @apply focus:ring-4 focus:outline-none font-medium rounded text-sm  text-center mb-2 dark:hover:text-white scale-100 hover:scale-105 transition-all duration-200 ease-in-out text-gray-800 hover:text-white border border-gray-500 hover:bg-gray-500 focus:ring-gray-300 dark:border-gray-200 dark:text-slate-200 dark:hover:text-gray-100 dark:hover:bg-gray-800 dark:focus:ring-gray-700;
+}
+
+.btn__outline__light {
+    @apply focus:ring-4 focus:outline-none font-medium rounded text-sm  text-center mb-2 dark:hover:text-white scale-100 hover:scale-105 transition-all duration-200 ease-in-out text-gray-800 hover:text-gray-900 border border-gray-500 bg-slate-100 dark:bg-transparent dark:border-white hover:bg-white focus:ring-gray-300 dark:border-gray-600 dark:text-gray-200 dark:hover:bg-gray-900 dark:focus:ring-gray-700;
+}
+
+.btn__outline__dark {
+    @apply focus:ring-4 focus:outline-none font-medium rounded text-sm  text-center mb-2 dark:hover:text-white scale-100 hover:scale-105 transition-all duration-200 ease-in-out text-gray-800 hover:text-white border border-gray-800 hover:bg-gray-900 focus:ring-gray-300 dark:border-gray-600 dark:text-gray-200 dark:hover:bg-gray-200 dark:focus:ring-gray-700 dark:hover:text-gray-900;
+}
+
+.btn__gradient__primary {
+    @apply text-white bg-gradient-to-r hover:bg-gradient-to-br focus:ring-4 shadow-lg dark:shadow-lg font-medium rounded text-sm  text-center mb-2 scale-100 hover:scale-105 focus:outline-none transition-all duration-200 ease-in-out from-sky-500 via-sky-600 to-sky-700 focus:ring-sky-300 dark:focus:ring-sky-800 shadow-sky-500/50 dark:shadow-sky-800/80;
+}
+
+.btn__gradient__danger {
+    @apply text-white bg-gradient-to-r hover:bg-gradient-to-br focus:ring-4 shadow-lg dark:shadow-lg font-medium rounded text-sm  text-center mb-2 scale-100 hover:scale-105 focus:outline-none transition-all duration-200 ease-in-out from-rose-500 via-rose-600 to-rose-700 focus:ring-rose-300 dark:focus:ring-rose-800 shadow-rose-500/50 dark:shadow-rose-800/80;
+}
+
+.btn__gradient__success {
+    @apply text-white bg-gradient-to-r hover:bg-gradient-to-br focus:ring-4 shadow-lg dark:shadow-lg font-medium rounded text-sm  text-center mr-2 mb-2 scale-100 hover:scale-105 focus:outline-none transition-all duration-200 ease-in-out from-teal-500 via-teal-600 to-teal-700 focus:ring-teal-300 dark:focus:ring-teal-800 shadow-teal-500/50 dark:shadow-teal-800/80;
+}
+
+.btn__gradient__warning {
+    @apply text-white bg-gradient-to-r hover:bg-gradient-to-br focus:ring-4 shadow-lg dark:shadow-lg font-medium rounded text-sm  text-center mr-2 mb-2 scale-100 hover:scale-105 focus:outline-none transition-all duration-200 ease-in-out from-amber-500 via-amber-600 to-amber-700 focus:ring-amber-300 dark:focus:ring-amber-800 shadow-amber-500/50 dark:shadow-amber-800/80;
+}
+
+.btn__gradient__info {
+    @apply text-white bg-gradient-to-r hover:bg-gradient-to-br focus:ring-4 shadow-lg dark:shadow-lg font-medium rounded text-sm  text-center mr-2 mb-2 scale-100 hover:scale-105 focus:outline-none transition-all duration-200 ease-in-out from-indigo-500 via-indigo-600 to-indigo-700 focus:ring-indigo-300 dark:focus:ring-indigo-800 shadow-indigo-500/50 dark:shadow-indigo-800/80;
+}
+
+.btn__gradient__secondary {
+    @apply text-white bg-gradient-to-r hover:bg-gradient-to-br focus:ring-4 shadow-lg dark:shadow-lg font-medium rounded text-sm  text-center mr-2 mb-2 scale-100 hover:scale-105 focus:outline-none transition-all duration-200 ease-in-out from-gray-500 via-gray-600 to-gray-700 focus:ring-gray-300 dark:focus:ring-gray-800 shadow-gray-500/50 dark:shadow-gray-800/80;
+}
+
+.btn__gradient__light {
+    @apply text-white bg-gradient-to-r hover:bg-gradient-to-br focus:ring-4 shadow-lg dark:shadow-lg font-medium rounded text-sm  text-center mr-2 mb-2 scale-100 hover:scale-105 focus:outline-none transition-all duration-200 ease-in-out from-slate-200 via-slate-300 to-white border border-gray-300 text-gray-800 dark:text-gray-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-700 focus:ring-slate-300 dark:focus:ring-slate-800 shadow-slate-500/50 dark:shadow-slate-800/80;
+}
+
+.btn__gradient__dark {
+    @apply text-white bg-gradient-to-r hover:bg-gradient-to-br focus:ring-4 shadow-lg dark:shadow-lg font-medium rounded text-sm  text-center mr-2 mb-2 scale-100 hover:scale-105 focus:outline-none transition-all duration-200 ease-in-out from-gray-900 via-gray-800 to-gray-700 dark:from-slate-300 dark:via-slate-400 dark:to-white dark:text-gray-800 focus:ring-gray-300 dark:focus:ring-gray-800 shadow-gray-500/50 dark:shadow-gray-800/80;
+}
+
+.btn__rounded {
+    @apply rounded-full;
+}
+
+.btn:disabled {
+    @apply opacity-50 cursor-not-allowed;
+}
+
+.card {
+    @apply bg-white rounded-md border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700;
+}
+
+.card__head {
+    @apply p-6 bg-gray-100 dark:bg-gray-800;
+}
+
+.card__body {
+    @apply p-6 border border-l-0 border-r-0 border-gray-300 dark:border-gray-200 dark:bg-gray-900;
+}
+
+.card__footer {
+    @apply p-6 bg-gray-100 dark:bg-gray-800;
+}
+
+.card__img {
+    @apply w-full rounded-t-md object-cover object-center;
+}
+
+.card__title {
+    @apply mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white;
+}
+
+img.img__fit {
+    @apply object-cover object-center w-full;
+}
+
+.modal {
+    @apply backdrop-blur-md bg-gray-900/60  overflow-hidden fixed top-0 right-0 left-0 z-50 w-full md:inset-0 md:h-full h-screen transition-transform duration-300 ease-in;
+}
+
+.modal__head {
+    @apply flex justify-between items-start p-4 rounded-t border-b dark:border-gray-600;
+}
+
+.modal__head__primary {
+    @apply flex justify-between items-start p-4 rounded-t border-b dark:border-gray-600 bg-sky-500 dark:bg-sky-700 text-white;
+}
+
+.modal__head__primary button {
+    @apply text-white hover:text-gray-800 dark:hover:bg-white;
+}
+
+.modal__head__danger {
+    @apply flex justify-between items-start p-4 rounded-t border-b dark:border-gray-600 bg-rose-500 dark:bg-rose-700 text-white;
+}
+
+.modal__head__danger button {
+    @apply text-white hover:text-gray-800 dark:hover:bg-white;
+}
+
+.modal__head__success {
+    @apply flex justify-between items-start p-4 rounded-t border-b dark:border-gray-600 bg-teal-500 dark:bg-teal-700 text-white;
+}
+
+.modal__head__success button {
+    @apply text-white hover:text-gray-800 dark:hover:bg-white;
+}
+
+.modal__head__warning {
+    @apply flex justify-between items-start p-4 rounded-t border-b dark:border-gray-600 bg-amber-500 dark:bg-amber-700 text-white;
+}
+
+.modal__head__warning button {
+    @apply text-white hover:text-gray-800 dark:hover:bg-white;
+}
+
+.modal__head__info {
+    @apply flex justify-between items-start p-4 rounded-t border-b dark:border-gray-600 bg-indigo-500 dark:bg-indigo-700 text-white;
+}
+
+.modal__head__info button {
+    @apply text-white hover:text-gray-800 dark:hover:bg-white;
+}
+
+.modal__head__secondary {
+    @apply flex justify-between items-start p-4 rounded-t border-b dark:border-gray-600 bg-gray-500 dark:bg-gray-700 text-white;
+}
+
+.modal__head__secondary button {
+    @apply text-white hover:text-gray-800 dark:hover:bg-white;
+}
+
+.modal__head__dark {
+    @apply flex justify-between items-start p-4 rounded-t border-b dark:border-gray-600 bg-gray-800 dark:bg-gray-900 text-white;
+}
+
+.modal__head__dark button {
+    @apply text-white hover:text-gray-800 dark:hover:bg-white;
+}
+
+.table__responsive {
+    @apply overflow-x-auto relative shadow-md rounded-md;
+}
+
+table,
+.table {
+    @apply w-full text-sm text-left text-gray-500 dark:text-gray-400;
+}
+
+thead {
+    @apply text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400;
+}
+
+thead.thead__primary {
+    @apply text-white dark:text-white uppercase bg-sky-500 dark:bg-sky-700;
+}
+
+thead.thead__danger {
+    @apply text-white dark:text-white uppercase bg-rose-500 dark:bg-rose-700;
+}
+
+thead.thead__success {
+    @apply text-white dark:text-white uppercase bg-teal-500 dark:bg-teal-700;
+}
+
+thead.thead__warning {
+    @apply text-white dark:text-white uppercase bg-amber-500 dark:bg-amber-700;
+}
+
+thead.thead__info {
+    @apply text-white dark:text-white uppercase bg-indigo-500 dark:bg-indigo-700;
+}
+
+thead.thead__secondary {
+    @apply text-white uppercase bg-gray-500 dark:bg-gray-700;
+}
+
+thead.thead__dark {
+    @apply text-white uppercase bg-gray-800 dark:bg-gray-900;
+}
+
+th,
+tr,
+td {
+    @apply py-3 px-6 text-left whitespace-nowrap text-ellipsis;
+}
+
+th {
+    @apply font-bold;
+}
+
+tbody tr {
+    @apply border-b border-gray-200 dark:border-gray-600 bg-white even:bg-gray-100 even:dark:bg-gray-800 even:dark:border-gray-700 dark:bg-gray-900;
+}
+
+tfoot {
+    @apply text-gray-700 uppercase bg-gray-100 dark:bg-gray-700 dark:text-gray-400;
+}
+
+.table__caption {
+    @apply p-5 text-left text-gray-700 bg-white dark:text-white dark:bg-gray-800;
+}
+
+.nav__link {
+    @apply flex items-center p-2 text-base font-normal text-white rounded-lg dark:text-white hover:bg-sky-50 hover:text-sky-400 dark:hover:text-gray-500;
+}
+
+.nav__link.active {
+    /*  */
+}
+
+.nav__dropdown {
+    @apply flex items-center p-2 w-full text-base font-normal text-white rounded-lg transition duration-75 dark:text-white hover:bg-sky-50 hover:text-sky-400 dark:hover:text-gray-500;
+}
